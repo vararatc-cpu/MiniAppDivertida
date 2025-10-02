@@ -13,7 +13,7 @@ namespace MiniAppDivertida
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Mover el botón a una posición aleatoria dentro del formulario
+            // Mover el botón a una posición aleatoria
             int maxX = this.ClientSize.Width - button1.Width;
             int maxY = this.ClientSize.Height - button1.Height;
 
@@ -23,6 +23,10 @@ namespace MiniAppDivertida
             // Mensajes aleatorios
             string[] mensajes = { "¡Hola!", "¡Clic rápido!", "¡Sigue intentando!", "¡Eres rápido!" };
             label1.Text = mensajes[rnd.Next(mensajes.Length)];
+
+            // Cambiar colores aleatorios
+            button1.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+            this.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
         }
 
         private void label1_Click(object sender, EventArgs e)
